@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-//==========ここから追加==========
-//use App\Article;
+//==========ここから追加==========ここを消してもlocalhostに繋がった
+use App\Article;
 //==========ここまで追加==========
 use Illuminate\Http\Request;
 
