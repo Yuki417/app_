@@ -20,4 +20,7 @@ ArticleControllerは、まだ作成していませんので、次のパートで
 なお、LaravelやRuby on Railsなどでは、ルーティングによって動くことになるコントローラーの各メソッドのことを、アクションメソッドあるいはアクションとよく呼びます。
 本教材では、アクションメソッドという呼び方をしていきます。 */
 
-Route::get('/', 'ArticleController@index');
+
+
+//Route::get('/', 'ArticleController@index'); // ここをいじるとlocalhostsに繋がらなくなる
+Route::get('/', 'UsersController@index')->name('users');
