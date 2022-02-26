@@ -14,25 +14,25 @@ https://note.com/laravelstudy/n/ne41d086745bc
 
  @section('content')
    <div class="container">
-     @foreach($users as $user) {{--この行を追加--}}
+     @foreach($weight as $weight) {{--この行を追加--}}
        <div class="card mt-3">
          <div class="card-body d-flex flex-row">
            <i class="fas fa-user-circle fa-3x mr-1"></i>
            <div>
              <div class="font-weight-bold">
-               {{ $users->user->name }} {{--この行を変更--}}
+               {{ $weight->user->name }} {{--この行を変更--}}
              </div>
              <div class="font-weight-lighter">
-               {{ $users->created_at->format('Y/m/d H:i') }} {{--この行を変更--}}
+               {{ $weight->created_at->format('Y/m/d H:i') }} {{--この行を変更--}}
              </div>
            </div>
          </div>
          <div class="card-body pt-0 pb-2">
            <h3 class="h4 card-title">
-             {{ $users->title }} {{--この行を変更--}}
+             {{ $weight->title }} {{--この行を変更--}}
            </h3>
            <div class="card-text">
-             {!! nl2br(e( $users->body )) !!} {{--この行を変更--}}
+             {!! nl2br(e( $weight->body )) !!} {{--この行を変更--}}
            </div>
          </div>
        </div>
