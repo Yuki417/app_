@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 //==========ここから追加==========ここを消してもlocalhostに繋がった
-use App\Article;
+use App\User;  //
 //==========ここまで追加==========
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class UsersController extends Controller
 {
 
     public function index()
@@ -19,7 +19,11 @@ class ArticleController extends Controller
         //==========ここまで追加==========
 
         //return view('articles.index', ['articles' => $articles]);
-        return view('articles.index');
+        return view('articles.graph');
 
     }
 }
+
+// M Modelを呼び出す Article.php
+// C ContorollerからBladeに渡す　ArticleController（ここ）
+// V Bladeで表示する　index.blade.php（graph.blade.php）

@@ -3,6 +3,11 @@ https://note.com/laravelstudy/n/ne41d086745bc
 # ChartJSの組み込み　参照
  --}}
 
+{{--
+ @extends('app') 上のバー ログインなど
+@section('content')
+ @include('nav')   @includeを使うことで、別のビューを取り込めます
+ --}}
 
  <!DOCTYPE html>
  <html lang="ja">
