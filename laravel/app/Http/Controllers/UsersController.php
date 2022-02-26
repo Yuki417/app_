@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 //==========ここから追加==========ここを消してもlocalhostに繋がった
-use App\User;  //
+use App\Users;  //
 //==========ここまで追加==========
 use Illuminate\Http\Request;
 
@@ -12,14 +12,17 @@ class UsersController extends Controller
 
     public function index()
     {
+        $users = Users::all();
+
+
 
         //==========ここから追加==========17行目
-        //$articles = Article::all()->sortByDesc('created_at');
-        //$articles = Article::orderBy('created_at','desc')->get();
+        $users = Users::all()->sortByDesc('created_at');
+        //$users = Users::orderBy('created_at','desc')->get();
         //==========ここまで追加==========
 
         //return view('articles.index', ['articles' => $articles]);
-        return view('articles.graph');
+        return view('articles.graph', ['users' => $users]);
 
     }
 }

@@ -23,4 +23,4 @@ ArticleControllerは、まだ作成していませんので、次のパートで
 
 
 //Route::get('/', 'ArticleController@index'); // ここをいじるとlocalhostsに繋がらなくなる
-Route::get('/', 'UsersController@index');
+Route::get('/', 'UsersController@index')->name('users');
