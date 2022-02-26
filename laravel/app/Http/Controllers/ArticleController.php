@@ -19,7 +19,14 @@ class ArticleController extends Controller
         //==========ここまで追加==========
 
         //return view('articles.index', ['articles' => $articles]);
-        return view('articles.index');
+        return view('articles.graph');
 
     }
 }
+
+
+
+
+// M Modelを呼び出す Article.php
+// C ContorollerからBladeに渡す　ArticleController（ここ）
+// V Bladeで表示する　index.blade.php
