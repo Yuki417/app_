@@ -28,4 +28,4 @@ class WeightController extends Controller
 
 // M Modelを呼び出す Users.php   Article.php
 // C ContorollerからBladeに渡す　 UsersController    ArticleController（ここ）
-// V Bladeで表示する　graph.blade.php   index.blade.php
+// V Bladeで表示する　graph.blade.php   index.blade.php。。
