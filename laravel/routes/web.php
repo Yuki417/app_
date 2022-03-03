@@ -21,5 +21,4 @@ ArticleControllerは、まだ作成していませんので、次のパートで
 本教材では、アクションメソッドという呼び方をしていきます。 */
 
 Route::get('/', 'WeightController@index')->name('weight');
-
-// GitHub
+// あ
