@@ -48,7 +48,7 @@ https://note.com/laravelstudy/n/ne41d086745bc
  <html lang="ja">
  <head>
   <meta charset="utf-8">
-  <title>体重グラフ</title>
+  <title>グラフ</title>
  </head>
   <body>
 
@@ -56,7 +56,7 @@ https://note.com/laravelstudy/n/ne41d086745bc
 		<div class="row justify-content-center">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header">体重グラフ</div>
+					<div class="card-header">グラフ</div>
 						<div class="card-body">
 {{-- 							<button class="btn btn-warning" onclick="history./back()">戻る</button>
  --}}
