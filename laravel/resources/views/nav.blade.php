@@ -16,13 +16,15 @@
 
         @guest {{--この行を追加--}}
         <li class="nav-item">
-          <a class="nav-link" href="">ログイン</a>
+          <a class="nav-link" href="{{ route('login') }}">ログイン</a>  {{-- 編集3-3 --}}
         </li>
         @endguest {{--この行を追加--}}
 
         @auth {{--この行を追加--}}
         <li class="nav-item">
-          <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
+        {{--<a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>--}}
+        <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a> {{--4-3 この行のhref属性を変更--}}
+
         </li>
         @endauth {{--この行を追加--}}
 
@@ -64,9 +66,9 @@
         <a class="nav-link" href="">ログアウト</a>
       </li>
 
-   {{--    <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
-      </li> --}}
+   <li class="nav-item">
+        <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>会員TOPページ</a>
+      </li>
 
       <!-- Dropdown -->
       <li class="nav-item dropdown">
