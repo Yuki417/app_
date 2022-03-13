@@ -11,14 +11,14 @@
 |
 */
 
-/* ここではRouteファサードのgetというメソッドに、2つの引数を渡しています。
-Route::getの第一引数には、URLを文字列で渡します。
-第二引数には、どのコントローラーで何のメソッドを実行するのかを文字列で渡します。コントローラー名とメソッド名の間には@を入れます。
+use App\Http\Controllers\WeightController;
 
-以上により、/というURLにリクエスト(ブラウザなどからのアクセス)があったら、ArticleControllerのindexアクションメソッドを動かす、ということが定義されます。
-ArticleControllerは、まだ作成していませんので、次のパートで作成します。
-なお、LaravelやRuby on Railsなどでは、ルーティングによって動くことになるコントローラーの各メソッドのことを、アクションメソッドあるいはアクションとよく呼びます。
-本教材では、アクションメソッドという呼び方をしていきます。 */
+Auth::routes(); // 2-2認証関連のルーティングのひな形を用意してくれる
+Route::get('/', 'WeightController@index')->name('weight'); // 【グラフ画面】
+Route::resource('/articles', 'WeightController'); //->middleware('auth');  /* 4-2 【ログイン画面】ArticleController → WeightControllerに変更している。middlewareは未ログインユーザーに他の画面を表示させないようにする。後々設定が必要になる4-3 【ログイン画面】*/
 
-Route::get('/', 'WeightController@index')->name('weight');
-// あ
+Route::get('/', 'WeightController@show')->name('show'); // 【編集画面】 resources/views/articles/  参考サイトhttps://qiita.com/kamome_susume/items/10f6774329ac289b7fbe
+
+Route::get('weight/confirm', 'WeightController@confirm')->name('confirm'); // 【削除確認画面】　
+Route::get('weight/registration', 'WeightController@registration')->name('registration'); // 【ジム会員新登録画面】
+Route::get('weight/record', 'WeightController@record')->name('record'); //【体重記録画面】
