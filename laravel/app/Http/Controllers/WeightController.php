@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class WeightController extends Controller
 {
+
+    // グラフ画面
     public function index()
     {
         $weights = Weight::all();
@@ -22,7 +24,7 @@ class WeightController extends Controller
     }
 
 
-    // 4-3 ここから【】
+    // 4-3 新規登録画面
     public function create()
     {
         return view('articles.create');
@@ -30,19 +32,36 @@ class WeightController extends Controller
     // ここまで4-3
 
 
-    // 詳細画面
+    // 編集画面
     public function show()
     {
         return view('articles.show');
     }
     //ここまで詳細画面
 
-    // 削除画面
+
+    // 削除確認画面
     public function confirm()
     {
-        return view('articles.confirm');
+        return view('weight.confirm');
     }
     // ここ削除画面まで
+
+
+    // 【ジム会員新登録画面】
+    public function registration()
+    {
+        return view('weight.registration');
+    }
+    // ここ削除画面まで
+
+
+    // 【体重記録画面】
+    public function record()
+    {
+        return view('weight.record');
+    }
+
 
 }
 

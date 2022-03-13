@@ -1,7 +1,7 @@
 {{-- 4-3 --}}
 @extends('app')
 
-@section('title', '会員一覧')
+@section('title', '会員一覧TOP画面')
 
 @include('nav')
 
