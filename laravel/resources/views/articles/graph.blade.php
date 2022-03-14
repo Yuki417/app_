@@ -1,7 +1,7 @@
 {{--
 https://note.com/laravelstudy/n/ne41d086745bc
 # ChartJSの組み込み　参照
- --}}
+ localhostsだけで見れるのはこっち--}}
 
  @extends('app') {{-- 上のバー ログインなど --}}
 @section('content')
@@ -10,7 +10,7 @@ https://note.com/laravelstudy/n/ne41d086745bc
 
  @extends('app')
 
- @section('title', '会員一覧')
+ @section('title', '体重グラフ2')
 
  @section('content')
    <div class="container">
@@ -83,6 +83,9 @@ https://note.com/laravelstudy/n/ne41d086745bc
          "2022年4月",
          "2022年5月",
          "2022年6月",
+         "2022年7月",
+
+
      ];
      //平均体重ログ
      var average_weight_log = [
@@ -90,8 +93,9 @@ https://note.com/laravelstudy/n/ne41d086745bc
          51.5,	//2月のデータ
          52.0,	//3月のデータ
          51.5,	//4月のデータ
-         51.0,	//5月のデータ
-         50.0	//6月のデータ
+         51.5,	//5月のデータ
+         51.0,	//6月のデータ
+         51.0,
      ];
  //グラフを描画
     var ctx = document.getElementById("myChart");
