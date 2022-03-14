@@ -18,8 +18,8 @@ https://note.com/laravelstudy/n/ne41d086745bc
 				<div class="card">
 					<div class="card-header">グラフ</div>
 						<div class="card-body">
-{{-- 							<button class="btn btn-warning" onclick="history./back()">戻る</button>
- --}}
+ 							<button class="btn btn-warning" onclick="history./back()">戻る</button>
+
 							<canvas id="myChart"></canvas>
 
                         </div>
