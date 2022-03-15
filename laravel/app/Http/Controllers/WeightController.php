@@ -10,7 +10,7 @@ class WeightController extends Controller
 {
 
     // グラフ画面
-    public function index()
+     public function index()
     {
         $weights = Weight::all();
 
@@ -22,6 +22,20 @@ class WeightController extends Controller
         //return view('articles.index', ['articles' => $articles]);【グラフ画面】
         return view('articles.graph', ['weight' => $weights]);
     }
+    // ここまで
+
+
+
+/*
+        // TOP画面
+        public function index()
+        {
+            return view('WeightRegistrations.index');
+        }
+        //ここまで
+
+ */
+
 
 
     // 4-3 新規登録画面
@@ -33,34 +47,34 @@ class WeightController extends Controller
 
 
     // 編集画面
-    public function show()
+    public function edit()
     {
-        return view('articles.show');
+        return view('WeightRegistrations.edit');
     }
-    //ここまで詳細画面
+    //ここまで
 
-
-    // 削除確認画面
+    // 削除確認画面 ダイアログなので必要ない？
     public function confirm()
     {
-        return view('weight.confirm');
+        return view('WeightRegistrations.confirm');
     }
-    // ここ削除画面まで
+    // ここまで
 
 
     // 【ジム会員新登録画面】
     public function registration()
     {
-        return view('weight.registration');
+        return view('WeightRegistrations.registration');
     }
-    // ここ削除画面まで
+    // ここまで
 
 
     // 【体重記録画面】
     public function record()
     {
-        return view('weight.record');
+        return view('WeightRegistrations.record');
     }
+    // ここまで
 
 
 }
