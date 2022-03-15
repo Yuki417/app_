@@ -8,7 +8,7 @@
 @section('content')
 
 {{-- 画面遷移リンク --}}
-<a href="{{ route('registration') }}">新規登録</a>
+<a href="{{ route('create') }}">新規登録</a>
 <a href="{{ route('record') }}">体重</a>
 <a href="{{ route('edit') }}">編集</a>
 {{-- <a href="{{ route('graph') }}">グラフ</a>
@@ -29,7 +29,7 @@
                             {{ session('status') }}
                         </div>
                     @endif -->
-                    <a class="btn btn-primary original" href="{{ route('registration')}}">新規登録</a>
+                    <a class="btn btn-primary original" href="{{ route('create')}}">新規登録</a>
                     <table class="table">
                         <thead>
                             <tr>
