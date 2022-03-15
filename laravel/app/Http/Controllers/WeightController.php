@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class WeightController extends Controller
 {
 
-    // グラフ画面
+
+
+/*     // グラフ画面  モックプレゼンで作成したやつ
      public function index()
     {
         $weights = Weight::all();
@@ -23,18 +25,25 @@ class WeightController extends Controller
         return view('articles.graph', ['weight' => $weights]);
     }
     // ここまで
-
-
-
-/*
-        // TOP画面
-        public function index()
-        {
-            return view('WeightRegistrations.index');
-        }
-        //ここまで
-
  */
+
+    // グラフ画面
+     public function graph()
+    {
+        $weights = Weight::all();
+        return view('WeightRegistrations.graph', ['weight' => $weights]);
+    }
+    // ここまで
+
+
+        // TOP画面
+    public function index()
+    {
+        return view('WeightRegistrations.index');
+    }
+    //ここまで
+
+
 
 
 

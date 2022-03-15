@@ -10,9 +10,9 @@
 {{-- 画面遷移リンク --}}
 <a href="{{ route('registration') }}">新規登録</a>
 <a href="{{ route('record') }}">体重</a>
-<a href="{{ route('show') }}">編集</a>
-<a href="{{ route('weight') }}">グラフ</a>
-<a href="{{ route('confirm') }}">削除</a>
+<a href="{{ route('edit') }}">編集</a>
+{{-- <a href="{{ route('graph') }}">グラフ</a>
+ --}}<a href="{{ route('confirm') }}">削除</a>
 
 
 
