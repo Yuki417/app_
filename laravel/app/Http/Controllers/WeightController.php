@@ -10,7 +10,6 @@ class WeightController extends Controller
 {
 
 
-
 /*     // グラフ画面  モックプレゼンで作成したやつ
      public function index()
     {
@@ -26,6 +25,7 @@ class WeightController extends Controller
     }
     // ここまで
  */
+
 
     // グラフ画面
      public function graph()
@@ -50,7 +50,7 @@ class WeightController extends Controller
     // 4-3 新規登録画面
     public function create()
     {
-        return view('articles.create');
+        return view('WeightRegistrations.create');
     }
     // ここまで4-3
 
