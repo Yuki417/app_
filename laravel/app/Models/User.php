@@ -1,3 +1,4 @@
+<!-- Userモデルは必要ない？ -->
 <?php
 
 namespace App;
