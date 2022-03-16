@@ -2,29 +2,24 @@
 
 namespace App\Http\Controllers;
 
+/* use App\Customer;
 use App\Weight;  //Weight.phpモデル呼び出し
+ *///Modelからデータを取ってくるのに今後必要になると思う？
+use App\Customer as AppCustomer;
+use App\Models\Customer;
+use App\Models\Weight;
+
 
 use Illuminate\Http\Request;
 
+
+/* 今日追加　削除機能のとき */
+use DB;
+use Illuminate\support\Facades\Log;
+
+
 class WeightController extends Controller
 {
-
-
-/*     // グラフ画面  モックプレゼンで作成したやつ
-     public function index()
-    {
-        $weights = Weight::all();
-
-        //ここから17行目
-        //$weights = Weight::all()->sortByDesc('created_at');
-        //$users = Users::orderBy('created_at','desc')->get();
-        //ここまで
-
-        //return view('articles.index', ['articles' => $articles]);【グラフ画面】
-        return view('articles.graph', ['weight' => $weights]);
-    }
-    // ここまで
- */
 
 
     // グラフ画面
@@ -32,18 +27,27 @@ class WeightController extends Controller
     {
         $weights = Weight::all();
         return view('WeightRegistrations.graph', ['weight' => $weights]);
+
     }
     // ここまで
+
+
 
 
         // TOP画面
     public function index()
     {
-        return view('WeightRegistrations.index');
+
+        $customers = Customer::all();
+        return view('WeightRegistrations.index', ['customers' => $customers]);
     }
+
+        //クエリビルダ？
+/*         $customers = DB::table('customers')
+        ->select('id','name','birthday', 'gender')
+        ->get();
+ */        // ->paginate(20);
     //ここまで
-
-
 
 
 
@@ -62,13 +66,6 @@ class WeightController extends Controller
     }
     //ここまで
 
-    // 削除確認画面 ダイアログなので必要ない？
-    public function confirm()
-    {
-        return view('WeightRegistrations.confirm');
-    }
-    // ここまで
-
 
     // 【ジム会員新登録画面】
     public function registration()
@@ -85,6 +82,25 @@ class WeightController extends Controller
     }
     // ここまで
 
+
+    // 削除確認画面 ダイアログなので必要ない？
+    public function confirm()
+    {
+        return view('WeightRegistrations.confirm');
+    }
+    // ここまで
+
+
+
+
+    public function destroy($id)
+    {
+        $input = Customer::find($id);
+
+        $input->delete();
+
+        return redirect()->action('WeightRegistrationController@index');
+    }
 
 }
 

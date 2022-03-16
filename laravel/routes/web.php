@@ -14,7 +14,9 @@
 use App\Http\Controllers\WeightController;
 
 Auth::routes(); // 2-2認証関連のルーティングのひな形を用意してくれる
-Route::resource('/articles', 'WeightController');//->middleware('auth');  /* 【ログイン画面】4-3  middlewareは未ログインユーザーに他の画面を表示させないようにする。後々設定が必要になる4-3 */
+Route::resource('/articles', 'WeightController');//->middleware('auth');
+/* 【ログイン画面】4-3  middlewareは未ログインユーザーに他の画面を表示させないようにする。後々設定が必要になる4-3 */
+/* リソースコントローラーの設定になっている */
 
 //Route::get('/', 'WeightController@index')->name('index'); // 【グラフ画面・モックプレゼンのやつ】
 Route::get('/WeightRegistrations/graph', 'WeightController@graph')->name('graph');  // グラフ画面
@@ -23,3 +25,10 @@ Route::get('WeightRegistrations/index', 'WeightController@index')->name('index')
 Route::get('WeightRegistrations/confirm', 'WeightController@confirm')->name('confirm'); // 【削除確認画面】　
 Route::get('WeightRegistrations/create', 'WeightController@create')->name('create'); // 【ジム会員新登録画面】
 Route::get('WeightRegistrations/record', 'WeightController@record')->name('record'); //【体重記録画面】
+
+
+Route::get('/', [ WeightController::class, 'index']); // 【一覧TOP画面認画面】
+
+Route::post('destroy/{id}', 'WeightController@destroy')->name('WeightRegistrations.destroy');
+
+//Route::post('/destory', [WeightRegistrations::class, 'destory'])->name('destory'); // 削除ボタン　ゆうま 35
