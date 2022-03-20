@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7517dbc74b0aecd2ab7b3fc8f3ca34079e7f3851',
+        'reference' => 'bb684b1a873e5a39278a98839e0321d736e7dbca',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7517dbc74b0aecd2ab7b3fc8f3ca34079e7f3851',
+            'reference' => 'bb684b1a873e5a39278a98839e0321d736e7dbca',
             'dev_requirement' => false,
         ),
         'squizlabs/php_codesniffer' => array(
